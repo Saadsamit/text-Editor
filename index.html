@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/78add01631.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="bg-blue-300 p-10 mx-auto w-10/12 mt-10">
+        <h2 class="text-5xl py-5 capitalize text-center">my text editor</h2>
+        <div class="bg-sky-200 p-5 border-2 border-pink-900">
+            <div class="border-b-2 border-pink-900 mb-4 pb-4 flex justify-between">
+                <div>
+                    <button onclick="btnevent(this, 'fontWeight', 'bold', 'normal')" id="btns" class="uppercase text-2xl p-2 leading-6 mr-2">
+                        b
+                    </button>
+                    <button onclick="btnevent(this, 'fontStyle', 'italic', 'normal')" class="uppercase text-2xl p-2 leading-6 mr-2">
+                        i
+                    </button>
+                    <button onclick="btnevent(this, 'textDecoration', 'underline', 'none')" class="uppercase text-2xl p-2 leading-6">
+                        u
+                    </button>
+                </div>
+                <div>
+                    <button onclick="textAlign(this, 'left')" class="text-xl p-2 leading-5 mr-2">
+                        <i class="fa-solid fa-align-left"></i>
+                    </button>
+                    <button onclick="textAlign(this, 'center')" class="text-xl p-2 leading-5 mr-2">
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
+                    <button onclick="textAlign(this, 'right')" class="text-xl p-2 leading-5 mr-2">
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
+                    <button onclick="textAlign(this, 'justify')" class="text-xl p-2 leading-5">
+                        <i class="fa-solid fa-align-justify"></i>
+                    </button>
+                </div>
+                <div>
+                    <input onchange="mynumber(this)" type="number" class="w-12  mr-2 bg-sky-200" value="17">
+                    <button onclick="textcase(this)" class="bg-white text-2xl p-2 leading-6 mr-2">
+                        aA
+                    </button>
+                    <input oninput="mycolor(this)" type="color" id="input-color">
+                </div>
+            </div>
+            <textarea class="w-full p-2" rows="10" placeholder="please enter your text...."></textarea>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
